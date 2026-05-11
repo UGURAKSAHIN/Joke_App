@@ -1,4 +1,4 @@
-# Joke Application
+# Joke_App
 
 Chuck Norris API'den rastgele saka alan, istege bagli Turkce ceviri yapan, Unsplash'tan gorsel ekleyen ve favori/gecmis kaydi tutan basit frontend uygulamasi.
 
