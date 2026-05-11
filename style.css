@@ -1,0 +1,100 @@
+:root {
+  --app-bg: #f4f7fb;
+  --app-ink: #182033;
+  --app-muted: #68738a;
+  --app-border: #d9e1ef;
+  --app-accent: #d8345f;
+  --app-teal: #0d9488;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--app-bg);
+  color: var(--app-ink);
+}
+
+.app-hero {
+  background: linear-gradient(135deg, #0f766e 0%, #2563eb 58%, #d8345f 100%);
+  color: #fff;
+}
+
+.app-hero .title,
+.app-hero .subtitle {
+  color: #fff;
+}
+
+.app-panel,
+.app-welcome,
+.app-joke-card,
+.app-list-panel {
+  border: 1px solid var(--app-border);
+  box-shadow: 0 12px 35px rgba(24, 32, 51, 0.08);
+}
+
+.app-joke-card {
+  overflow: hidden;
+}
+
+.app-joke-card .image img {
+  object-fit: cover;
+}
+
+#joke-text {
+  line-height: 1.65;
+}
+
+.app-list-panel .panel-heading {
+  background: #fff;
+  color: var(--app-ink);
+}
+
+.app-empty-list {
+  color: var(--app-muted);
+  justify-content: center;
+}
+
+.app-list {
+  display: grid;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.app-list-item {
+  width: 100%;
+  border: 1px solid var(--app-border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--app-ink);
+  cursor: pointer;
+  display: block;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.app-list-item:hover {
+  border-color: var(--app-teal);
+}
+
+.app-list-item small {
+  color: var(--app-muted);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.app-list-item span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .hero-body {
+    padding: 2rem 1.25rem;
+  }
+
+  .section {
+    padding: 1.5rem 1rem;
+  }
+}

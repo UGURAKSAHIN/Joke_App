@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joke Application</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section class="hero app-hero">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Random Joke Generator</h1>
+          <p class="subtitle">Chuck Norris jokes, images and Turkish translation</p>
+        </div>
+      </div>
+    </section>
+
+    <main class="section">
+      <div class="container">
+        <div class="columns is-variable is-5">
+          <section class="column is-4-desktop">
+            <div class="box app-panel">
+              <div class="field">
+                <label class="label" for="category-select">Category</label>
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select id="category-select">
+                      <option value="">Mixed</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="checkbox">
+                  <input id="translate-toggle" type="checkbox" checked>
+                    Show Turkish translation
+                </label>
+              </div>
+
+              <button id="chuck-btn" class="button is-danger is-fullwidth">
+                Get new joke
+              </button>
+
+              <p id="status-message" class="help mt-3" aria-live="polite"></p>
+            </div>
+
+            <div class="panel app-list-panel">
+              <p class="panel-heading">Favorites</p>
+              <div id="favorites-list" class="panel-block app-empty-list">
+                No favorites yet.
+              </div>
+            </div>
+          </section>
+
+          <section class="column is-8-desktop">
+            <div id="welcome-state" class="box app-welcome has-text-centered">
+              <p class="title is-4">Ready.</p>
+              <p class="subtitle is-6">Select a category and get a new joke.</p>
+            </div>
+
+            <article id="joke-card" class="card app-joke-card is-hidden">
+              <div id="image-wrapper" class="card-image is-hidden">
+                <figure class="image is-16by9">
+                  <img id="random-image" alt="">
+                </figure>
+              </div>
+
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <img id="joke-icon" alt="Chuck Norris icon">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p id="joke-title" class="title is-5">Chuck Norris</p>
+                    <p id="joke-meta" class="subtitle is-6">Random joke</p>
+                  </div>
+                </div>
+
+                <div id="joke-text" class="content is-size-5"></div>
+                <div id="translation-box" class="notification is-info is-light is-hidden">
+                  <p class="has-text-weight-semibold mb-1">Turkish</p>
+                  <p id="translated-text"></p>
+                </div>
+
+                <div class="buttons mt-4">
+                  <button id="copy-btn" class="button is-light">Copy</button>
+                  <button id="favorite-btn" class="button is-warning is-light">Add to Favorites</button>
+                  <a id="source-link" class="button is-link is-light" href="#" target="_blank" rel="noreferrer">
+                    Open Source
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <div class="panel app-list-panel mt-5">
+              <p class="panel-heading">Recent Jokes</p>
+              <div id="history-list" class="panel-block app-empty-list">
+                No history yet.
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
