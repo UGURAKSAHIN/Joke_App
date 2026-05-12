@@ -1,22 +1,37 @@
-# Joke_App
+# Joke App
 
-Chuck Norris API'den rastgele saka alan, istege bagli Turkce ceviri yapan, Unsplash'tan gorsel ekleyen ve favori/gecmis kaydi tutan basit frontend uygulamasi.
+# About Project
+This project is a simple and entertaining Joke Application developed to display random jokes to users with a clean and interactive interface. The application allows users to generate jokes instantly and enjoy a responsive user experience.
 
-## Dosyalar
+# Features
+😂 Random Joke Generator
+🔄 Refresh / New Joke Button
+📱 Responsive User Interface
+⚡ Fast and Lightweight Structure
+🎨 Simple and Modern Design
+🔗 API Integration Support
 
-- `index.html`: Uygulama arayuzu ve script baglantilari
-- `style.css`: Ozel gorunum ve responsive duzen
-- `main.js`: Butonlar, render islemleri ve uygulama akisi
-- `joke_api.js`: Chuck Norris API islemleri
-- `unsplash.js`: Unsplash random image islemleri
-- `translate.js`: MyMemory Translate API islemleri
-- `storage.js`: LocalStorage favori ve gecmis islemleri
-- `config.js`: API ayarlari
+# Technology Stack
 
-## Calistirma
+# Frontend
+HTML5
+CSS3
+JavaScript
 
-`index.html` dosyasini tarayicida acman yeterli.
+# Installation
 
-## Not
+- git clone https://github.com/UGURAKSAHIN/JokeApp.git
+- cd JokeApp
 
-Unsplash access key frontend tarafinda gorunur. Bu proje icin uygundur, fakat gercek bir yayinda anahtari backend uzerinden kullanmak daha dogrudur.
+# API Example
+- https://api.chucknorris.io
+- https://api.mymemory.translated.net
+- https://unsplash.com/developers
+
+# Preview
+<img width="2214" height="1195" alt="Screenshot (27)" src="https://github.com/user-attachments/assets/507556f1-c773-4718-a26d-b56da036f987" />
+<img width="2208" height="1185" alt="Screenshot (28)" src="https://github.com/user-attachments/assets/77a2f72f-6ecd-4f1f-8932-fd36133daf83" />
+<img width="2195" height="1166" alt="Screenshot (29)" src="https://github.com/user-attachments/assets/bb394c87-7fc4-40af-8250-27cfcf3a70d8" />
+
+# License
+This project is licensed under the MIT License.
