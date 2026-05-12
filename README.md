@@ -14,9 +14,9 @@ This project is a simple and entertaining Joke Application developed to display 
 # Technology Stack
 
 # Frontend
-HTML5
-CSS3
-JavaScript
+- HTML5
+- CSS3
+- JavaScript
 
 # Installation
 
