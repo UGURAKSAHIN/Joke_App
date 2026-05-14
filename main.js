@@ -11,6 +11,9 @@ const storage = new JokeStorage();
 const screen = new Screen();
 
 let currentJoke = null;
+let currentImage = null;
+let currentTranslation = null;
+let currentCategory = null;
 
 const getCategoryLabel = (category) => {
   return category || "Mixed";
@@ -34,6 +37,9 @@ const buildJokeRecord = (joke, image, translatedText) => {
 
 const renderJoke = (joke) => {
   currentJoke = joke;
+  currentImage = joke.imageUrl || null;
+  currentTranslation = joke.translatedText || null;
+  currentCategory = joke.category || null;
   screen.renderJoke(joke, storage.isFavorite(joke.id));
 };
 
@@ -103,7 +109,7 @@ const toggleCurrentFavorite = () => {
     return;
   }
 
-  const saved = storage.toggleFavorite(currentJoke);
+  const saved = storage.toggleFavorite(currentJoke, currentImage, currentTranslation, currentCategory);
   screen.updateFavoriteButton(storage.isFavorite(currentJoke.id));
   renderLists();
   screen.showStatus(
