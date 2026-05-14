@@ -4,31 +4,50 @@
   --app-muted: #68738a;
   --app-border: #d9e1ef;
   --app-accent: #d8345f;
+  --app-surface: #fff;
   --app-teal: #0d9488;
+  --app-shadow: 0 12px 35px rgb(24 32 51 / 8%);
+  --app-radius: 8px;
 }
 
 body {
-  min-height: 100vh;
   background: var(--app-bg);
   color: var(--app-ink);
+  min-height: 100vh;
 }
 
 .app-hero {
-  background: linear-gradient(135deg, #0f766e 0%, #2563eb 58%, #d8345f 100%);
+  background: linear-gradient(
+    135deg,
+    #0f766e 0%,
+    #2563eb 58%,
+    var(--app-accent) 100%
+  );
   color: #fff;
 }
 
-.app-hero .title,
-.app-hero .subtitle {
+.app-hero :is(.title, .subtitle) {
   color: #fff;
 }
 
-.app-panel,
-.app-welcome,
-.app-joke-card,
-.app-list-panel {
+.app-title {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.app-title-icon {
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 18%);
+  flex: 0 0 auto;
+  height: 3rem;
+  width: 3rem;
+}
+
+:is(.app-panel, .app-welcome, .app-joke-card, .app-list-panel) {
   border: 1px solid var(--app-border);
-  box-shadow: 0 12px 35px rgba(24, 32, 51, 0.08);
+  box-shadow: var(--app-shadow);
 }
 
 .app-joke-card {
@@ -36,7 +55,9 @@ body {
 }
 
 .app-joke-card .image img {
+  height: 100%;
   object-fit: cover;
+  width: 100%;
 }
 
 #joke-text {
@@ -44,7 +65,7 @@ body {
 }
 
 .app-list-panel .panel-heading {
-  background: #fff;
+  background: var(--app-surface);
   color: var(--app-ink);
 }
 
@@ -60,19 +81,22 @@ body {
 }
 
 .app-list-item {
-  width: 100%;
   border: 1px solid var(--app-border);
-  border-radius: 8px;
-  background: #fff;
+  border-radius: var(--app-radius);
+  background: var(--app-surface);
   color: var(--app-ink);
   cursor: pointer;
   display: block;
   padding: 0.75rem;
   text-align: left;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
 }
 
-.app-list-item:hover {
+.app-list-item:is(:hover, :focus-visible) {
   border-color: var(--app-teal);
+  box-shadow: 0 0 0 3px rgb(13 148 136 / 12%);
+  outline: none;
 }
 
 .app-list-item small {
